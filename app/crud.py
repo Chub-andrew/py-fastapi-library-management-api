@@ -2,8 +2,8 @@ from typing import Optional
 
 from sqlalchemy.orm import Session
 
-from models import DBAuthor, DBBook
-from schemas import AuthorsCreate, BookCreate
+from app.models import DBAuthor, DBBook
+from app.schemas import AuthorsCreate, BookCreate
 
 
 def get_all_authors(db: Session, skip: int, limit: int) -> Optional[list]:

@@ -3,16 +3,16 @@ from typing import Optional
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from crud import (
+from app.crud import (
     get_all_authors,
     get_author_by_name,
     create_author_crud,
     get_all_books,
     create_book_crud,
     get_author_by_id_crud)
-from database import SessionLocal
-from models import DBAuthor
-from schemas import AuthorsList, AuthorsCreate, BookList, BookCreate
+from app.database import SessionLocal
+from app.models import DBAuthor
+from app.schemas import AuthorsList, AuthorsCreate, BookList, BookCreate
 
 app = FastAPI()
 
